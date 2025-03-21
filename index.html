@@ -1,37 +1,111 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Sederhana</title>
+    <title>Digital Business Card</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            box-sizing: border-box;
         }
-        .container {
-            max-width: 600px;
-            margin: 50px auto;
+
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        .card {
+            width: 350px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
             padding: 20px;
-            background: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+            align-items: center;
+            gap: 15px;
         }
-        h1 {
+
+        .profile-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ccc;
+        }
+
+        .info {
+            flex: 1;
+        }
+
+        .info h1 {
+            font-size: 20px;
+            margin-bottom: 4px;
             color: #333;
         }
-        p {
+
+        .info p {
+            font-size: 14px;
             color: #666;
+            margin-bottom: 10px;
+        }
+
+        .info .icon-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 6px;
+            color: #e53935;
+        }
+
+        .info .icon-container i {
+            margin-right: 8px;
+        }
+
+        .info a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .info .address {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #777;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Halo, Dunia! Saya Nizarr</h1>
-        <p>Ini adalah halaman sederhana yang dapat Anda deploy di GitHub Pages.</p>
+
+<div class="card">
+    <img src="profile.jpg" alt="Profile Image" class="profile-image">
+    <div class="info">
+        <h1>MUHAMMAD NIZAR AKMAL</h1>
+        <p>AMATEUR PROGRAMMER</p>
+
+        <div class="icon-container">
+            <i>&#9742;</i> <!-- Phone icon -->
+            <span>+62 821-1672-5971</span>
+        </div>
+
+        <div class="icon-container">
+            <i>&#9993;</i> <!-- Email icon -->
+            <a href="nizarakmal8@gmail.com">nizarakmal8@gmail.com</a>
+        </div>
+
+        <div class="price">
+            <p>Rate per Hour: $1</p>
+        </div>
+
+        <p class="address">
+            Desa Galanggang, Kp. Dunguspurna, Kec. Batujajar<br>
+            Bandung Barat, Jawa Barat, Indonesia
+        </p>
     </div>
+</div>
+
 </body>
 </html>
